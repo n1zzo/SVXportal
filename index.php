@@ -335,10 +335,7 @@ $(document).ready(function(){
 
 
 
-<<<<<<< HEAD
-=======
-
-	      // javascipt links to page tabs
+	    // javascipt links to page tabs
 		  let url = location.href.replace(/\/$/, "");
 		  
 		  if (location.hash) {
@@ -395,18 +392,6 @@ $(document).ready(function(){
 				}
 
 				fix_sidemeny_active(hash[1]);
-				
-
-
-
->>>>>>> master
-				
-
-
-				
-					
-		     
-		      
 		    }, 400);
 		  } 
 
@@ -524,24 +509,11 @@ function reflector_handler()
     	var date = new Date().toLocaleTimeString();
     	
     	console.log("Demon running "+date);
-<<<<<<< HEAD
 
 
     	get_active_last();
   	  }
     }).fail(function() { console.log("Data eror"); interval = setTimeout(reflector_handler, 800);    });
-
-
-
-
-=======
-  	  }
-    }).fail(function() { console.log("Data eror"); interval = setTimeout(reflector_handler, 800);    });
-
-
-
-
->>>>>>> master
 }
 function create_bar_rx(value,element,rx_sql)
 {
@@ -602,11 +574,7 @@ var talkgroups_active = new Array();
 for(var k in data.nodes)
 {
 		
-<<<<<<< HEAD
 	    if(data.nodes[k].hidden == true && secret_santa == 0 && data.nodes[k].isTalker != true ) 
-=======
-	    if(data.nodes[k].hidden == true && secret_santa == 0) 
->>>>>>> master
 	    {
 	    	delete data.nodes[k];
 	    }
@@ -751,12 +719,7 @@ for(var k in data.nodes){
         if(data.nodes[k].isTalker == false)
     	{
         	$('#Reflektortable_row_'+k).removeClass( "table-info" );
-<<<<<<< HEAD
         	$('#Reflektortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td '+tg_open_str+' '+is_resstricted_collor+'>'+data.nodes[k].tg+'</td>'+'<td class="red_collor"><?php echo _("NO")?></td><td class="text-primary">'+text+'</td><td></td><td></td>');
-=======
-        	$('#Reflektortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_collor"><?php echo _("NO")?></td><td class="text-primary">'+text+'</td><td></td><td></td>');
->>>>>>> master
-
     	 	 totalSeconds[k]=0;
     
     	}
@@ -767,11 +730,7 @@ for(var k in data.nodes){
             	
     		//tr class="table-info">
     		var idns = k;
-<<<<<<< HEAD
     		$('#Reflektortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td '+tg_open_str+' '+is_resstricted_collor+'>'+data.nodes[k].tg+'</td>'+'<td class="green_collor" ><?php echo _("YES")?></td><td class="text-primary">'+text+'</td><td><label id="Start_talk_'+k+'"></label></td><td  class="d-none d-md-table-cell" ><label id="minutes_'+idns+'">00</label>:<label id="seconds_'+idns+'">00</label></td>');
-=======
-    		$('#Reflektortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_collor" ><?php echo _("YES")?></td><td class="text-primary">'+text+'</td><td><label id="Start_talk_'+k+'"></label></td><td  class="d-none d-md-table-cell" ><label id="minutes_'+idns+'">00</label>:<label id="seconds_'+idns+'">00</label></td>');
->>>>>>> master
     		$('#Reflektortable_row_'+k).addClass( "table-info" );
     
              totalSeconds[k]++;
@@ -916,15 +875,11 @@ function listen_live_external()
 
 	window.open(station_url+".m3u", "_blank", ""); 
 }
-<<<<<<< HEAD
 function open_tg_window(tg)
 {
 	 window.open("last_heard_page.php?TG="+tg, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,width=800,height=800"); 
 	
 }
-
-=======
->>>>>>> master
 
 
 
@@ -2834,14 +2789,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 								
 								?>
 								
-<<<<<<< HEAD
 								<button type="button" class="btn btn-secondary" id="Show_radiomobile_button">
 									<?php echo _('Radiomobile')?>
 								</button>
-=======
-								<button type="button" class="btn btn-secondary" id="Show_radiomobile_button"
-										><?php echo _('Radiomobile')?></button>
->>>>>>> master
 
 						
 								
@@ -3133,11 +3083,7 @@ function update_tx_station(lat,lon,idn,tg,label,active,talker)
     	var newZoom = map.getView().getZoom();
 
 
-<<<<<<< HEAD
     	if(newZoom >= 7 && disable_text_map == 0)
-=======
-    	if(newZoom >= 7)
->>>>>>> master
     	{
     		lablel_text = label;
     	}
@@ -3376,11 +3322,6 @@ function update_text_byid(id,text,sql)
 function add_repeater_node(lat, lon,label,idn)
 {
 
-<<<<<<< HEAD
-	
-
-=======
->>>>>>> master
 
 
 	addmarker(0,lat, lon,label,"aa"+idn);
@@ -3502,11 +3443,7 @@ function prosess_json_reflecktor()
     
 		for(var k in data.nodes){
 			
-<<<<<<< HEAD
 		    if(data.nodes[k].hidden == true && secret_santa == 0 && data.nodes[k].isTalker != true)
-=======
-		    if(data.nodes[k].hidden == true && secret_santa == 0)
->>>>>>> master
 		    {
 		    	delete data.nodes[k];
 		    	
@@ -3546,13 +3483,8 @@ function prosess_json_reflecktor()
 
    
     				
-<<<<<<< HEAD
     				var name =  k+" "+data.nodes[k].qth[qth].name;
     				console.log(data.nodes[k].qth[qth].rx[qth1].name);
-    				
-=======
-    				var name = k+" "+data.nodes[k].qth[qth].rx[qth1].name;
->>>>>>> master
     				var talkgroup =data.nodes[k].tg;
     				var idn=k+qth1;
     				console.log(idn);
@@ -4142,8 +4074,6 @@ function get_statistics_hour()
 	  });
 }
 var set_mounth_station ="";
-<<<<<<< HEAD
-=======
 
 function set_repater_statics_mounth()
 {
@@ -4347,7 +4277,6 @@ function get_statistics_month()
 }
 
 
->>>>>>> master
 
 function set_repater_statics_mounth()
 {
@@ -4371,7 +4300,6 @@ function get_statistics_mounth()
 	var barDatafromJSON;
 	var date_value = $('#Datepicker_graph').val();
 
-<<<<<<< HEAD
 
     var barDatafromJSON= {
     	labels: [''],
@@ -4427,7 +4355,6 @@ window.myBara = new Chart(ctx, {
 	}
 });
 
-=======
 	
 		  for(var station in Stations_json.data)
 		  {
@@ -4457,7 +4384,6 @@ window.myBara = new Chart(ctx, {
 		  console.log(total_time_secunds);
 		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(total_time_secunds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
 		
->>>>>>> master
 	
 	$.get( "get_statistics.php", { date: date_value , cahce_mouth_tg : '1'} )
 	  .done(function( data ) {
@@ -5537,22 +5463,12 @@ function add_tx_station()
 			    console.log(data.nodes[k]);
 		    	delete data.nodes[k];
 	
-<<<<<<< HEAD
 		    }
 		    if ( k.includes("/")) {
 				var new_call = k.replace("/",'-');
 		    	data.nodes[new_call] = data.nodes[k]; 
 		        delete data.nodes[k];
 		    }
-=======
-		    }
-		    if ( k.includes("/")) {
-				var new_call = k.replace("/",'-');
-		    	data.nodes[new_call] = data.nodes[k]; 
-		        delete data.nodes[k];
-		    }
->>>>>>> master
-		    
 		}
 		
 		for(var k in data.nodes){
@@ -5575,9 +5491,6 @@ function add_tx_station()
         			
         				//console.log(name);
         				
-<<<<<<< HEAD
-        				
-        				
         
         					if(!valudate_if_exist(lon,lat))
             				{
@@ -5588,11 +5501,6 @@ function add_tx_station()
         						add_repeater_transmiter(lat,lon,name,idn,talkgroup)
             				}
             				
-=======
-        
-        				add_repeater_transmiter(lat,lon,name,idn,talkgroup)
-        		
->>>>>>> master
         				// tempoary fix if useing mor than 1 transmitter on same qth
         				setmap(lat, lon,8);
         				break;
@@ -5661,11 +5569,7 @@ function update_tx_station_loop(data)
 				idn =idn.replace(/ /g,"_");
 
 				if(isNaN(parseFloat(lat)) == false && isNaN(parseFloat(lon)) == false )
-<<<<<<< HEAD
 				  update_tx_station(lat,lon,idn,talkgroup,name,active,data.nodes[k].isTalker);
-=======
-				  update_tx_station(lat,lon,idn,talkgroup,name,active);
->>>>>>> master
 		        	
 
 		        }
@@ -6167,11 +6071,7 @@ function fnExcelexport(table)
         
                        <ul class="nav  navbar-expand">
                       	<li class="nav-link  active"><a data-toggle="tab" onclick="$('#ssas a.active').removeClass('active');get_statistics();" href="#dastaty"><i class="far fa-circle"></i> <?php echo _("Day")?></a></li>
-<<<<<<< HEAD
                       	<li class="nav-link "><a data-toggle="tab" onclick="$('#ssas a.active').removeClass('active');get_statistics_hour();get_station_chat();" href="#menu_hour"><i class="far fa-circle"></i> <?php echo _("Hour")?></a></li>
-=======
-                      	<li class="nav-link "><a data-toggle="tab" onclick="$('#ssas a.active').removeClass('active');get_statistics_hour()" href="#menu_hour"><i class="far fa-circle"></i> <?php echo _("Hour")?></a></li>
->>>>>>> master
                       	<li class="nav-link "><a data-toggle="tab" onclick="$('#ssas a.active').removeClass('active');get_statistics_month()" href="#menu_month"><i class="far fa-circle"></i> <?php echo _("Month")?></a></li>
                       	<li class="nav-link "><a data-toggle="tab" onclick="$('#ssas a.active').removeClass('active');get_year_static()" href="#menu_year"><i class="far fa-circle"></i> <?php echo _("Year")?></a></li>
     
@@ -6186,11 +6086,7 @@ function fnExcelexport(table)
        					  <button class="prev-day btn btn-outline-secondary"  onclick="change_day_prew()" id="prev-day"><i class="fa fa-angle-left" aria-hidden='true' ></i></button>
        					</div>
        					<div class="col-8 col-xl-10">
-<<<<<<< HEAD
        					  <input style="margin-left: 5px" type="text" id="Datepicker_graph" value="<?php echo date("Y-m-d")?>" onchange="get_statistics();get_statistics_hour();change_data_date();" class="form-control" >
-=======
-       					  <input style="margin-left: 5px" type="text" id="Datepicker_graph" value="<?php echo date("Y-m-d")?>" onchange="get_statistics();get_statistics_hour();get_statistics_month();" class="form-control" >
->>>>>>> master
         				</div>
         				<div class="col-2 col-xl-1">
     					  <button style="margin-left: " class='next-day btn btn-outline-secondary' onclick="change_day_next()" ><i class='fa fa-angle-right' aria-hidden='true'></i></button>
@@ -6411,7 +6307,6 @@ function fnExcelexport(table)
                 			
                 			
             	 	
-<<<<<<< HEAD
             	 
    
    
@@ -6477,9 +6372,6 @@ function fnExcelexport(table)
    </div>
    
    <?php }?>
-=======
-            	 	</div>
->>>>>>> master
             	 
             	 </div>
             	 
